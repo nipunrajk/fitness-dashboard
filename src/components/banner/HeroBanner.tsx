@@ -1,7 +1,7 @@
 export default function HeroBanner() {
   return (
     <section
-      className='relative overflow-hidden rounded-xl p-8 pb-9 text-white shadow-sm
+      className='relative overflow-hidden rounded-xl p-8 pb-9 mb-6 text-white shadow-sm
              bg-[image:var(--bg-banner)]'
     >
       <div className='relative z-30 max-w-[306px]'>
