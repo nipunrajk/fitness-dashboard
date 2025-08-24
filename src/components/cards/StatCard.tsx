@@ -7,25 +7,29 @@ type Props = {
   variant?: Variant;
 };
 
-// Centralized styles for each variant
+
 const VARIANT_STYLES: Record<
   Variant,
   {
     cardBg: string;
     tileBg: string;
+    bannerSrc: string;
   }
 > = {
   workout: {
     cardBg: 'bg-[var(--color-workout)]',
     tileBg: 'bg-[var(--tile-workout)]',
+    bannerSrc: '/banner/workout.svg',
   },
   calories: {
     cardBg: 'bg-[var(--color-calories)]',
     tileBg: 'bg-[var(--tile-calories)]',
+    bannerSrc: '/banner/calorie.svg',
   },
   steps: {
     cardBg: 'bg-[var(--color-steps)]',
     tileBg: 'bg-[var(--tile-steps)]',
+    bannerSrc: '/banner/steps.svg',
   },
 };
 
@@ -65,6 +69,12 @@ export default function StatCard({ title, subtitle, icon, variant }: Props) {
           )}
         </div>
       </div>
+
+      <img
+        src={cfg.bannerSrc}
+        alt=''
+        className='pointer-events-none absolute inset-x-0 bottom-0 z-0 w-full select-none'
+      />
     </div>
   );
 }
