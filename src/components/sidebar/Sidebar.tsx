@@ -1,5 +1,5 @@
 const navItems = [
-  { label: 'Overview', icon: '/menu-icon/overview.svg', active: true }, 
+  { label: 'Overview', icon: '/menu-icon/overview.svg', active: true },
   { label: 'Workout', icon: '/menu-icon/Workout.svg' },
   { label: 'Diet Plan', icon: '/menu-icon/Diet Plan.svg' },
   { label: 'Goals', icon: '/menu-icon/Goal.svg' },
@@ -34,13 +34,13 @@ export default function Sidebar() {
           </button>
         ))}
       </nav>
-      <div className='mt-auto space-y-2 p-3'>
+      <div className='flex flex-col gap-4 p-6'>
         <button className='flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left text-slate-600 hover:bg-slate-50'>
-          <img src='/icons/help.svg' alt='' className='h-5 w-5' />
+          <img src='/menu-icon/Help.svg' alt='' className='h-5 w-5' />
           <span className='text-sm'>Help</span>
         </button>
         <button className='flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left text-slate-600 hover:bg-slate-50'>
-          <img src='/icons/logout.svg' alt='' className='h-5 w-5' />
+          <img src='/menu-icon/Logout.svg' alt='' className='h-5 w-5' />
           <span className='text-sm'>Logout</span>
         </button>
       </div>
