@@ -9,7 +9,7 @@ const navItems = [
 
 export default function Sidebar() {
   return (
-    <aside className='flex h-full w-64 flex-col border-r bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60'>
+    <aside className='flex h-full w-64 flex-col border-r border-slate-200/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60'>
       <div className='flex items-center justify-center gap-4 p-6 '>
         <div className='text-lg font-extrabold text-primary'>Fitness</div>
         <img src='/brand-icon.svg' alt='' className='h-8 w-8' />
