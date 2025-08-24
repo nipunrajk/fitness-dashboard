@@ -9,6 +9,20 @@
   --muted: #64748b;
   --neutral-100: #f1f5f9;
   --neutral-200: #f8fafb;
+  /* stat card brand hues */
+  --workout-500: #06b6d4;  /* cyan */
+  --calories-500: #f97316; /* orange */
+  --steps-500: #8b5cf6;    /* purple */
+
+  /* stat card gradients */
+  --grad-workout: linear-gradient(90deg, #06b6d4, #22d3ee);
+  --grad-calories: linear-gradient(90deg, #f97316, #fb923c);
+  --grad-steps: linear-gradient(90deg, #8b5cf6, #a78bfa);
+
+  /* stat card hill svgs */
+  --img-workout-hills: url('/banner/workout.svg');
+  --img-calories-hills: url('/banner/calorie.svg');
+  --img-steps-hills: url('/banner/steps.svg');
   --gradient-banner: linear-gradient(
     90deg,
     #fc6212 42.28%,
@@ -27,6 +41,19 @@
   --color-neutral-200: var(--neutral-200);
 
   --bg-banner: var(--gradient-banner);
+
+  /* expose stat card tokens to Tailwind */
+  --color-workout: var(--workout-500);
+  --color-calories: var(--calories-500);
+  --color-steps: var(--steps-500);
+
+  --bg-grad-workout: var(--grad-workout);
+  --bg-grad-calories: var(--grad-calories);
+  --bg-grad-steps: var(--grad-steps);
+
+  --bg-workout-hills: var(--img-workout-hills);
+  --bg-calories-hills: var(--img-calories-hills);
+  --bg-steps-hills: var(--img-steps-hills);
 }
 
 /* html,

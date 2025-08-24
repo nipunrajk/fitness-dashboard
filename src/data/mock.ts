@@ -1,9 +1,9 @@
 import type { StatCardItem, ScheduleItem, GoalItem, FoodRow, ChartPoint } from '../types';
 
 export const statCards: StatCardItem[] = [
-  { title: 'Workout', subtitle: '4 hrs', colorFrom: 'from-cyan-500', colorTo: 'to-blue-500', icon: '/icons/dumbbell.svg' },
-  { title: 'Calories', subtitle: '1800 kcal', colorFrom: 'from-orange-500', colorTo: 'to-amber-500', icon: '/icons/fire.svg' },
-  { title: 'Steps', subtitle: '2200 steps', colorFrom: 'from-violet-600', colorTo: 'to-fuchsia-600', icon: '/icons/footsteps.svg' },
+  { title: 'Workout', subtitle: '4 hrs', variant: 'workout', icon: '/banner/workout-icon.svg' },
+  { title: 'Calories', subtitle: '1800 kcal', variant: 'calories', icon: '/banner/calorie-icon.svg' },
+  { title: 'Steps', subtitle: '2200 steps', variant: 'steps', icon: '/banner/steps-icon.svg' },
 ];
 
 export const chartData: ChartPoint[] = [

@@ -14,7 +14,15 @@ export default function Overview() {
         <HeroBanner />
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
           {statCards.map((c) => (
-            <StatCard key={c.title} title={c.title} subtitle={c.subtitle} icon={c.icon} from={c.colorFrom} to={c.colorTo} />
+            <StatCard
+              key={c.title}
+              title={c.title}
+              subtitle={c.subtitle}
+              icon={c.icon}
+              variant={c.variant}
+              from={c.colorFrom}
+              to={c.colorTo}
+            />
           ))}
         </div>
         <GoalProgress />
