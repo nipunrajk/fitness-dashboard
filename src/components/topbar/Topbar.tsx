@@ -4,26 +4,52 @@ type TopbarProps = { onMenuClick?: () => void };
 
 export default function Topbar({ onMenuClick }: TopbarProps) {
   return (
-    <header className="flex items-center justify-between gap-4 border-b border-slate-200/70 bg-white/70 p-4 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-      <div className="flex items-center gap-3">
+    <header className='flex items-center gap-4 border-b border-slate-200/70 bg-white/70 p-4 backdrop-blur supports-[backdrop-filter]:bg-white/60'>
+      {/* Left: Title */}
+      <div className='flex min-w-0 items-center gap-3'>
         <HamburgerButton onClick={onMenuClick} />
-        <div className="flex flex-col">
-          <span className="text-sm text-slate-500">Good Morning</span>
-          <h1 className="text-lg font-semibold text-slate-800">Welcome Back!</h1>
+        <div className='flex flex-col gap-1'>
+          <span className='text-[10px] font-normal  text-muted'>
+            Good Morning
+          </span>
+          <h1 className='text-base font-semibold text-secondary'>
+            Welcome Back!
+          </h1>
         </div>
       </div>
-      <div className="flex items-center gap-3">
-        <label className="relative hidden sm:block">
-          <span className="sr-only">Search</span>
+      {/* Right: Search pill + icons */}
+      <div className='flex min-w-0 flex-1 items-center gap-4 justify-end'>
+        <label className='relative hidden min-w-0 flex-1 sm:flex max-w-md md:max-w-lg'>
+          <span className='sr-only text-sm font-normal text-muted'>Search</span>
           <input
-            className="w-64 rounded-full border px-4 py-2 pl-9 text-sm outline-none ring-orange-200 focus:ring-2"
-            placeholder="Search"
+            className='w-full h-10 rounded-md bg-neutral-200 px-4 pl-9 pr-3 text-sm text-secondary placeholder:text-muted
+            outline-none border border-neutral-100 focus:border-primary focus:ring-0'
+            placeholder='Search'
           />
-          <svg className="absolute left-3 top-2.5 h-4 w-4 text-slate-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M12.9 14.32a8 8 0 111.414-1.414l3.387 3.387a1 1 0 01-1.414 1.414l-3.387-3.387zM14 8a6 6 0 11-12 0 6 6 0 0112 0z" clipRule="evenodd"/></svg>
+          <img
+            src='/menu-icon/search.svg'
+            alt=''
+            aria-hidden='true'
+            className='pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 opacity-70'
+          />
         </label>
-        <button aria-label="Notifications" className="grid h-9 w-9 place-items-center rounded-full border bg-white text-slate-600 hover:bg-slate-50">🔔</button>
-        <button aria-label="Settings" className="grid h-9 w-9 place-items-center rounded-full border bg-white text-slate-600 hover:bg-slate-50">⚙️</button>
-        <img src="/images/avatar.svg" alt="User avatar" className="h-9 w-9 rounded-full border" />
+        <button
+          aria-label='Notifications'
+          className='grid h-6 w-6 place-items-center bg-white text-slate-600 hover:bg-slate-50'
+        >
+          <img src='/menu-icon/notify.svg' alt='' />
+        </button>
+        <button
+          aria-label='Settings'
+          className='grid h-6 w-6 place-items-center bg-white text-slate-600 hover:bg-slate-50'
+        >
+          <img src='/menu-icon/settings.svg' alt='' />
+        </button>
+        <img
+          src='/avatar.png'
+          alt='User avatar'
+          className='h-9 w-9 rounded-full border'
+        />
       </div>
     </header>
   );

@@ -5,6 +5,10 @@
 :root {
   color-scheme: light;
   --primary: #f97316;
+  --secondary: #475569;
+  --muted: #64748b;
+  --neutral-100: #f1f5f9;
+  --neutral-200: #f8fafb;
 }
 
 @theme {
@@ -12,6 +16,10 @@
     Roboto, Noto Sans;
 
   --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+  --color-neutral-100: var(--neutral-100);
+  --color-neutral-200: var(--neutral-200);
 }
 
 /* html,
