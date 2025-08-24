@@ -1,10 +1,23 @@
+type TopbarProps = { onMenuClick?: () => void };
 
-export default function Topbar() {
+export default function Topbar({ onMenuClick }: TopbarProps) {
   return (
     <header className="flex items-center justify-between gap-4 border-b bg-white/70 p-4 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-      <div className="flex flex-col">
-        <span className="text-sm text-slate-500">Good Morning</span>
-        <h1 className="text-lg font-semibold text-slate-800">Welcome Back!</h1>
+      <div className="flex items-center gap-3">
+        <button
+          type="button"
+          aria-label="Open menu"
+          onClick={onMenuClick}
+          className="-ml-1 inline-flex h-9 w-9 items-center justify-center rounded-md border bg-white text-slate-700 hover:bg-slate-50 md:hidden"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <div className="flex flex-col">
+          <span className="text-sm text-slate-500">Good Morning</span>
+          <h1 className="text-lg font-semibold text-slate-800">Welcome Back!</h1>
+        </div>
       </div>
       <div className="flex items-center gap-3">
         <label className="relative hidden sm:block">

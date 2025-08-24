@@ -1,11 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 @import 'tailwindcss';
 
 /* App base styles */
 :root {
   color-scheme: light;
+  --primary: #f97316;
 }
 
-html, body, #root {
+@theme {
+  --font-sans: 'Manrope', ui-sans-serif, system-ui, -apple-system, Segoe UI,
+    Roboto, Noto Sans;
+
+  --color-primary: var(--primary);
+}
+
+/* html,
+body,
+#root {
   height: 100%;
 }
 
@@ -13,4 +24,7 @@ html, body, #root {
 :focus-visible {
   outline: 2px solid rgb(251 146 60 / 0.8);
   outline-offset: 2px;
+}
+*/ body {
+  font-family: var(--font-sans);
 }
