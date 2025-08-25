@@ -1,9 +1,30 @@
-import type { StatCardItem, ScheduleItem, GoalItem, FoodRow, ChartPoint } from '../types';
+import type {
+  StatCardItem,
+  ScheduleItem,
+  GoalItem,
+  FoodRow,
+  ChartPoint,
+} from '../types';
 
 export const statCards: StatCardItem[] = [
-  { title: 'Workout', subtitle: '4 hrs', variant: 'workout', icon: '/banner/workout-icon.svg' },
-  { title: 'Calories', subtitle: '1800 kcal', variant: 'calories', icon: '/banner/calorie-icon.svg' },
-  { title: 'Steps', subtitle: '2200 steps', variant: 'steps', icon: '/banner/steps-icon.svg' },
+  {
+    title: 'Workout',
+    subtitle: '4 hrs',
+    variant: 'workout',
+    icon: '/banner/workout-icon.svg',
+  },
+  {
+    title: 'Calories',
+    subtitle: '1800 kcal',
+    variant: 'calories',
+    icon: '/banner/calorie-icon.svg',
+  },
+  {
+    title: 'Steps',
+    subtitle: '2200 steps',
+    variant: 'steps',
+    icon: '/banner/steps-icon.svg',
+  },
 ];
 
 export const chartData: ChartPoint[] = [
@@ -17,17 +38,53 @@ export const chartData: ChartPoint[] = [
 ];
 
 export const schedule: ScheduleItem[] = [
-  { day: 'Monday', title: 'Stretch', time: '08:00 AM', meta: '20 Sets', icon: '/icons/yoga.svg' },
-  { day: 'Tuesday', title: 'Back Stretch', time: '08:00 AM', meta: '10 Round', icon: '/icons/yoga.svg' },
-  { day: 'Wednesday', title: 'Yoga', time: '09:00 AM', meta: '20 min', icon: '/icons/yoga.svg' },
+  {
+    day: 'Monday',
+    title: 'Stretch',
+    time: '08:00 AM',
+    meta: '20 Sets',
+    icon: '/schedule/stretch.png',
+  },
+  {
+    day: 'Tuesday',
+    title: 'Back Stretch',
+    time: '08:00 AM',
+    meta: '10 Round',
+    icon: '/schedule/back-stretch.png',
+  },
+  {
+    day: 'Wednesday',
+    title: 'Yoga',
+    time: '09:00 AM',
+    meta: '20 min',
+    icon: '/schedule/yoga.png',
+  },
 ];
 
 export const goals: GoalItem[] = [
-  { title: 'ABS & Stretch', subtitle: 'Saturday, April 14 | 08:00 AM', meta: '30 Min/day' },
-  { title: 'Push Up', subtitle: 'Sunday, April 15 | 08:00 AM', meta: '50 Sets/day' },
+  {
+    title: 'ABS & Stretch',
+    subtitle: 'Saturday, April 14 | 08:00 AM',
+    meta: '30 Min/day',
+  },
+  {
+    title: 'Push Up',
+    subtitle: 'Sunday, April 15 | 08:00 AM',
+    meta: '50 Sets/day',
+  },
 ];
 
 export const foods: FoodRow[] = [
-  { food: 'Burrito', meal: 'Pizza Burger', priority: '01:00 AM', carbs: '20 gm' },
-  { food: 'Burger', meal: 'Pizza Burger', priority: '01:00 AM', carbs: '20 gm' },
+  {
+    food: 'Burrito',
+    meal: 'Pizza Burger',
+    priority: '01:00 AM',
+    carbs: '20 gm',
+  },
+  {
+    food: 'Burger',
+    meal: 'Pizza Burger',
+    priority: '01:00 AM',
+    carbs: '20 gm',
+  },
 ];

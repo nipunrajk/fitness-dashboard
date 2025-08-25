@@ -9,6 +9,7 @@ export default function ScheduleList() {
         <ListItemCard
           key={i}
           icon={s.icon}
+          heading={s.day}
           title={s.title}
           subtitle={`At ${s.time}`}
           chipText={s.meta}

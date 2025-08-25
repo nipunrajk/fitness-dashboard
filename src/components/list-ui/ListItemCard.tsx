@@ -6,6 +6,8 @@ type Props = {
   subtitle?: string;
   chipText?: string;
   chipVariant?: ChipVariant;
+  // Optional label shown above the card (e.g., Monday, Tuesday)
+  heading?: string;
   className?: string;
 };
 
@@ -22,29 +24,44 @@ export default function ListItemCard({
   subtitle,
   chipText,
   chipVariant = 'orange',
+  heading,
   className,
 }: Props) {
   return (
     <article
       className={[
-        'flex items-center justify-between gap-3 rounded-xl bg-white p-3 shadow-sm ring-1 ring-slate-100',
+        'rounded-xl bg-white p-4 mb-4 shadow-sm ring-1 ring-slate-100',
         className,
       ]
         .filter(Boolean)
         .join(' ')}
     >
-      <div className='flex items-center gap-3'>
-        {icon && <img src={icon} alt='' className='h-9 w-9' />}
-        <div>
-          <div className='text-sm font-medium text-slate-800'>{title}</div>
-          {subtitle && <div className='text-xs text-slate-500'>{subtitle}</div>}
-        </div>
-      </div>
-      {chipText && (
-        <span className={['rounded-full px-2 py-1 text-xs', chipStyles[chipVariant]].join(' ')}>
-          {chipText}
-        </span>
+      {heading && (
+        <div className='mb-4 text-lg font-medium text-secondary'>{heading}</div>
       )}
+      <div className='flex items-center justify-between gap-3'>
+        <div className='flex items-center gap-4'>
+          {icon && <img src={icon} alt='' className='h-8 w-11' />}
+          <div>
+            <div className='text-sm font-medium text-slate-800'>{title}</div>
+            {subtitle && (
+              <div className='text-xs text-secondary font-normal'>
+                {subtitle}
+              </div>
+            )}
+          </div>
+        </div>
+        {chipText && (
+          <span
+            className={[
+              'rounded-full px-2 py-1 text-xs font-medium',
+              chipStyles[chipVariant],
+            ].join(' ')}
+          >
+            {chipText}
+          </span>
+        )}
+      </div>
     </article>
   );
 }
