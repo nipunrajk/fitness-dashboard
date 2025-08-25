@@ -1,8 +1,12 @@
 export type StatCardItem = {
   title: string;
   subtitle?: string;
-  colorFrom?: string; // tailwind from-*
-  colorTo?: string;   // tailwind to-*
+  /**
+   * Prefer using `variant` for themed cards; falls back to Tailwind color classes if provided.
+   */
+  variant?: 'workout' | 'calories' | 'steps';
+  colorFrom?: string; // tailwind from-* (legacy)
+  colorTo?: string;   // tailwind to-* (legacy)
   icon?: string;      // path to svg in public
 };
 

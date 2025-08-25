@@ -5,6 +5,28 @@
 :root {
   color-scheme: light;
   --primary: #f97316;
+  --primary-hover: #FFEDD5;
+  --primary-border: #FDBA74;
+  --secondary: #475569;
+  --muted: #64748b;
+  --slate-800: #1e293b;
+  --neutral-100: #f1f5f9;
+  --neutral-200: #f8fafb;
+
+  --workout-500: #06b6d4;
+  --workout-600: #0891b2;
+  --calories-500: #f97316;
+  --calories-600: #ea580c;
+  --steps-500: #8b5cf6;
+  --steps-600: #6d28d9;
+
+  --gradient-banner: linear-gradient(
+    90deg,
+    #fc6212 42.28%,
+    rgba(234, 88, 12, 0) 100%
+  );
+  --gradient-promo: linear-gradient(150deg, #7c6dd7 4.71%, #c4baff 110.44%),
+    #fff;
 }
 
 @theme {
@@ -12,6 +34,25 @@
     Roboto, Noto Sans;
 
   --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-border: var(--primary-border);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+  --color-slate-800: var(--slate-800);
+  --color-neutral-100: var(--neutral-100);
+  --color-neutral-200: var(--neutral-200);
+
+  --bg-banner: var(--gradient-banner);
+
+  /* expose stat card tokens to Tailwind */
+  --color-workout: var(--workout-500);
+  --color-calories: var(--calories-500);
+  --color-steps: var(--steps-500);
+
+  /* icon tile solid colors */
+  --tile-workout: var(--workout-600);
+  --tile-calories: var(--calories-600);
+  --tile-steps: var(--steps-600);
 }
 
 /* html,
