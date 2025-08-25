@@ -5,7 +5,7 @@ type TopbarProps = { onMenuClick?: () => void };
 export default function Topbar({ onMenuClick }: TopbarProps) {
   return (
     <header className='flex items-center gap-4 border-b border-slate-200/70 bg-white/70 p-4 backdrop-blur supports-[backdrop-filter]:bg-white/60'>
-      {/* Left: Title */}
+
       <div className='flex min-w-0 items-center gap-3'>
         <HamburgerButton onClick={onMenuClick} />
         <div className='flex flex-col gap-1'>
@@ -17,7 +17,7 @@ export default function Topbar({ onMenuClick }: TopbarProps) {
           </h1>
         </div>
       </div>
-      {/* Right: Search pill + icons */}
+
       <div className='flex min-w-0 flex-1 items-center gap-4 justify-end'>
         <label className='relative hidden min-w-0 flex-1 sm:flex max-w-md md:max-w-lg'>
           <span className='sr-only text-sm font-normal text-muted'>Search</span>
@@ -48,7 +48,7 @@ export default function Topbar({ onMenuClick }: TopbarProps) {
         <img
           src='/avatar.png'
           alt='User avatar'
-          className='h-9 w-9 rounded-full border'
+          className='h-9 w-9 rounded-full border-none'
         />
       </div>
     </header>

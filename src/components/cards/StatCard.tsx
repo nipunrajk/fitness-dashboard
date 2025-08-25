@@ -5,6 +5,8 @@ type Props = {
   subtitle?: string;
   icon?: string;
   variant?: Variant;
+  from?: string; // gradient start color
+  to?: string; // gradient end color
 };
 
 
@@ -33,23 +35,26 @@ const VARIANT_STYLES: Record<
   },
 };
 
-export default function StatCard({ title, subtitle, icon, variant }: Props) {
+export default function StatCard({ title, subtitle, icon, variant, from, to }: Props) {
   const key: Variant = variant ?? 'workout';
   const cfg = VARIANT_STYLES[key];
+  const useGradient = Boolean(from && to);
 
   return (
     <div
       className={[
         'group relative overflow-hidden rounded-xl p-4 shadow-sm ring-1 ring-slate-100',
         'w-full h-[148px] md:w-[252px] md:h-[168px] flex-none',
-        cfg.cardBg,
+        useGradient ? '' : cfg.cardBg,
         'text-white',
       ].join(' ')}
+      style={useGradient ? { backgroundImage: `linear-gradient(135deg, ${from}, ${to})` } : undefined}
     >
       <div className={`relative z-10 flex items-start gap-3 md:gap-4`}>
         {icon && (
           <div
-            className={`h-10 w-10 md:h-[45px] md:w-[45px] rounded-md ${cfg.tileBg} flex items-center justify-center`}
+            className={`h-10 w-10 md:h-[45px] md:w-[45px] rounded-md ${useGradient ? '' : cfg.tileBg} flex items-center justify-center`}
+            style={useGradient ? { background: from } : undefined}
           >
             <img src={icon} alt='' className='h-6 w-6 md:h-8 md:w-8' />
           </div>
