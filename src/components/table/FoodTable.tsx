@@ -2,29 +2,48 @@ import { foods } from '../../data/mock';
 
 export default function FoodTable() {
   return (
-    <section className="rounded-xl bg-white p-2 shadow-sm ring-1 ring-slate-100">
-      <table className="w-full table-fixed text-left text-sm">
-        <thead>
-          <tr className="text-slate-500">
-            <th className="p-3 font-medium">Food</th>
-            <th className="p-3 font-medium">Meal</th>
-            <th className="p-3 font-medium">Priorities</th>
-            <th className="p-3 font-medium">Carbs</th>
-          </tr>
-        </thead>
-        <tbody>
-          {foods.map((row, i) => (
-            <tr key={i} className="border-t">
-              <td className="p-3">
-                <span className="inline-flex items-center gap-2 rounded-full bg-amber-50 px-3 py-1 text-amber-700">{row.food}</span>
-              </td>
-              <td className="p-3 text-slate-700">{row.meal}</td>
-              <td className="p-3 text-slate-700">{row.priority}</td>
-              <td className="p-3 text-slate-700">{row.carbs}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <section>
+      <div
+        className='grid grid-cols-5 gap-4 px-2 text-sm
+ font-bold text-secondary mb-4'
+      >
+        <div>Food</div>
+        <div>Meal</div>
+        <div>Calories</div>
+        <div>Priorities</div>
+        <div>Carbs</div>
+      </div>
+
+      {/* Rows */}
+      <div className='mt-3 space-y-3'>
+        {foods.map((row, i) => (
+          <div
+            key={i}
+            className='grid grid-cols-5 items-center gap-4 rounded-xl bg-white px-4 py-[10px] shadow-sm ring-1 ring-slate-100 text-sm text-secondary'
+          >
+            {/* Food with icon */}
+            <div className='flex items-center gap-4'>
+              <span className='inline-flex h-8 w-8 items-center justify-center rounded-full bg-[var(--color-primary-hover)] border-[0.5px] border-[var(--color-primary-border)]'>
+                <img
+                  src={
+                    row.food.includes('Burrito')
+                      ? '/food-table/buritto.png'
+                      : '/food-table/burger.png'
+                  }
+                  alt={row.food}
+                  className='h-6 w-6 object-contain'
+                />
+              </span>
+              <span className='font-bold'>{row.food}</span>
+            </div>
+
+            <div className='font-medium'>{row.meal}</div>
+            <div className='font-medium'>Receiving</div>
+            <div className='font-medium'>{row.priority}</div>
+            <div className='font-medium'>{row.carbs}</div>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }

@@ -12,7 +12,7 @@ export default function Overview() {
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div className="space-y-4 lg:col-span-2">
         <HeroBanner />
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 mb-6 sm:grid-cols-3">
           {statCards.map((c) => (
             <StatCard
               key={c.title}

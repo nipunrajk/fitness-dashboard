@@ -11,7 +11,7 @@ import {
 
 export default function GoalProgress() {
   return (
-    <section className='rounded-xl bg-white px-8 py-6 shadow-sm ring-1 ring-slate-100'>
+    <section className='rounded-xl bg-white px-8 py-6 mb-6 shadow-sm ring-1 ring-slate-100'>
       <div className='mb-3 flex items-center justify-between'>
         <h3 className='text-base font-bold text-secondary mb-8'>
           Goal Progress
