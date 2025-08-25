@@ -46,7 +46,7 @@ export default function Topbar({ onMenuClick }: TopbarProps) {
           <img src='/menu-icon/settings.svg' alt='' />
         </button>
         <img
-          src='/avatar.png'
+          src='/Avatar.png'
           alt='User avatar'
           className='h-9 w-9 rounded-full border-none'
         />
