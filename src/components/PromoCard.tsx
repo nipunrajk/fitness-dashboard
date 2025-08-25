@@ -4,7 +4,6 @@ export default function PromoCard() {
       className='relative overflow-hidden rounded-2xl py-6 px-4 text-white shadow-sm'
       style={{ background: 'var(--gradient-promo)' }}
     >
-      {/* decorative gradient svg */}
       <img
         src='/promo-card/gradient.svg'
         alt=''

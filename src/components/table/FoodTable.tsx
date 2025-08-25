@@ -21,7 +21,7 @@ export default function FoodTable() {
             key={i}
             className='grid grid-cols-5 items-center gap-4 rounded-xl bg-white px-4 py-[10px] shadow-sm ring-1 ring-slate-100 text-sm text-secondary'
           >
-            {/* Food with icon */}
+
             <div className='flex items-center gap-4'>
               <span className='inline-flex h-8 w-8 items-center justify-center rounded-full bg-[var(--color-primary-hover)] border-[0.5px] border-[var(--color-primary-border)]'>
                 <img

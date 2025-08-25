@@ -6,7 +6,6 @@ type Props = {
   subtitle?: string;
   chipText?: string;
   chipVariant?: ChipVariant;
-  // Optional label shown above the card (e.g., Monday, Tuesday)
   heading?: string;
   className?: string;
 };

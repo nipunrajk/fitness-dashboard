@@ -13,13 +13,11 @@ export default function HeroBanner() {
         </p>
       </div>
 
-      {/* Right-side image as a background layer */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-y-0 right-0 w-1/2 bg-no-repeat bg-right bg-contain md:bg-cover z-10 [background-image:url('/anastasia.png')] [mask-image:linear-gradient(to_left,black_75%,transparent)]"
       />
 
-      {/* Gradient overlay to tint the image (above image, below text) */}
       <div
         aria-hidden
         className='pointer-events-none absolute inset-0 bg-[image:var(--bg-banner)]  z-20'

@@ -5,8 +5,8 @@ type Props = {
   subtitle?: string;
   icon?: string;
   variant?: Variant;
-  from?: string; // gradient start color
-  to?: string; // gradient end color
+  from?: string;
+  to?: string;
 };
 
 
