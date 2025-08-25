@@ -7,7 +7,7 @@
   --primary: #f97316;
   --secondary: #475569;
   --muted: #64748b;
-  --slate-800: #1E293B;
+  --slate-800: #1e293b;
   --neutral-100: #f1f5f9;
   --neutral-200: #f8fafb;
 
@@ -23,6 +23,8 @@
     #fc6212 42.28%,
     rgba(234, 88, 12, 0) 100%
   );
+  --gradient-promo: linear-gradient(150deg, #7c6dd7 4.71%, #c4baff 110.44%),
+    #fff;
 }
 
 @theme {
